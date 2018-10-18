@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Insert</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.5.x" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js" data-semver="1.5.11"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+	  <form novalidate class="simple-form">
+		<label>Name 
+			<input ng-model="user.NAME" name="NAME" type="text" />
+		</label><br>
+		
+		<label>PASSWORD 
+			<input ng-model="user.PASSWORD" name="PASSWORD" type="text" />
+		</label><br>
+		<input type="button" ng-click="reset()" value="Reset" />
+		<input type="submit" ng-click="update(user)" value="Save" />
+	  </form>
+	  <pre>Now = {{user | json}}</pre>
+	  <pre>Post Render = {{master | json}}</pre>
+  </body>
+
+</html>
